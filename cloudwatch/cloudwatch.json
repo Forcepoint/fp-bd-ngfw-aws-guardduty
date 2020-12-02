@@ -1,0 +1,44 @@
+{
+    "source": [
+      "aws.guardduty"
+    ],
+    "detail-type": [
+      "GuardDuty Finding"
+    ],
+    "detail": {
+      "type": [
+        "Backdoor:EC2/Spambot",
+        "UnauthorizedAccess:EC2/SSHBruteForce",
+        "UnauthorizedAccess:EC2/RDPBruteForce",
+        "UnauthorizedAccess:EC2/MaliciousIPCaller.Custom",
+        "CryptoCurrency:EC2/BitcoinTool.B",
+        "UnauthorizedAccess:EC2/TorClient",
+        "UnauthorizedAccess:EC2/TorIPCaller",
+        "UnauthorizedAccess:EC2/TorRelay",
+        "Trojan:EC2/DropPoint",
+        "Trojan:EC2/BlackholeTraffic",
+        "UnauthorizedAccess:IAMUser/ConsoleLogin",
+        "ResourceConsumption:IAMUser/ComputeResources",
+        "Stealth:IAMUser/LoggingConfigurationModified",
+        "Recon:IAMUser/ResourcePermissions",
+        "Recon:IAMUser/UserPermissions",
+        "Persistence:IAMUser/UserPermissions",
+        "Recon:IAMUser/NetworkPermissions",
+        "Policy:IAMUser/RootCredentialUsage",
+        "PrivilegeEscalation:IAMUser/AdministrativePermissions",
+        "Persistence:IAMUser/NetworkPermissions",
+        "PenTest:IAMUser/PentooLinux",
+        "Persistence:IAMUser/ResourcePermissions",
+        "UnauthorizedAccess:IAMUser/MaliciousIPCaller",
+        "UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration",
+        "PenTest:IAMUser/KaliLinux",
+        "PenTest:IAMUser/ParrotLinux",
+        "Recon:IAMUser/MaliciousIPCaller",
+        "UnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B",
+        "UnauthorizedAccess:IAMUser/MaliciousIPCaller.Custom",
+        "Recon:IAMUser/TorIPCaller",
+        "Recon:IAMUser/MaliciousIPCaller.Custom",
+        "UnauthorizedAccess:IAMUser/TorIPCaller"
+      ]
+    }
+  }

@@ -1,0 +1,29 @@
+version: "3.6"
+
+services:
+
+    app:
+        image:  docker.frcpnt.com/ngfw-aws-guardduty-server
+        restart: unless-stopped
+        command: ["python", "main.py"]
+        ports:
+            - "5000:5000"
+        environment: 
+            - CONFIG_URL=<CONFIG_FILE_URL>
+        depends_on:
+            - broker
+
+    worker:
+        image: docker.frcpnt.com/ngfw-aws-guardduty-worker
+        restart: unless-stopped
+        command: ["celery", "-A", "tasks", "worker", "--loglevel=info"]
+        environment: 
+            - CONFIG_URL=<CONFIG_FILE_URL>
+        depends_on:
+            - broker
+
+    broker:
+        image: rabbitmq
+        restart: unless-stopped
+        ports: 
+            - "5672:5762"

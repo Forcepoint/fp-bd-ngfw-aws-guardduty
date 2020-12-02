@@ -1,0 +1,11 @@
+[Unit]
+Description=Celery worker for handling tasks in queue.
+
+[Service]
+Restart=on-failure
+RestartSec=60
+WorkingDirectory=/etc/ngfw-aws-guardduty-worker
+ExecStart=/etc/ngfw-aws-guardduty-worker/start_worker.sh
+
+[Install]
+WantedBy=multi-user.target
